@@ -1,11 +1,11 @@
 _______________________________________________________________________________________________________________________________________________________
 USE ig_clone;
 
------------ # We want to reward the user who has been around the longest, Find the 5 oldest users #----------
+#We want to reward the user who has been around the longest, Find the 5 oldest users#
 select username, created_at from users 
 order by created_at limit 5;
 
-------------#  To understand when to run the ad campaign, figure out the day of the week most users register on? #--------
+#  To understand when to run the ad campaign, figure out the day of the week most users register on? #
 select dayname(created_at) as day_most_user_register,
 count(created_at) as no_of_user_register 
 from users 
